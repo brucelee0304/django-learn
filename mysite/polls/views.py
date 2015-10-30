@@ -17,7 +17,14 @@ def detail(request, poll_id):
    return render(request, 'polls/detail.html', context)
 
 def results(request, poll_id):
-    return HttpResponse("You're looking at the results of poll %s." % poll_id)
+
+    id =request.GET['poll_id'];
+    content = Context({
+        'id':id,
+        'poll_id':poll_id
+    })
+
+    return render(request,'polls/results.html',content)
 
 def vote(request, poll_id):
     return HttpResponse("You're voting on poll %s." % poll_id)
