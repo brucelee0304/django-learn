@@ -1,2 +1,5 @@
 /.idea
 /mysite/.idea
+/mysite/polls/*.pyc
+/mysite/mysite/*.pyc
+*.pyc
